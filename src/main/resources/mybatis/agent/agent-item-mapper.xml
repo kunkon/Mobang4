@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="notice">
+	
+	<resultMap type="AgentItemDto" id="itemMap">
+		<result property="name_it" column="NAME_IT"/>
+		<result property="price_it" column="PRICE_IT"/>
+	</resultMap>
+	
+	<select id="selectItem" resultMap="itemMap">
+		SELECT NAME_IT, PRICE_IT FROM ITEM_TB WHERE NAME_IT = #{NAME_IT}
+	</select>
+	
+
+
+</mapper>

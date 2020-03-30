@@ -173,6 +173,7 @@ button{
     		<img class = "sales_view_img" src="https://pro.dabangapp.com/static/media/general.6822e11a.png" alt = "이미지 표시불가" height="350">
     	</div>
     	<div class = "container _img">
+    	<form method="get" action="agent_pay.agent">
     		<ul>
     			<li class = "sales_item">
     				<div class="summary">
@@ -193,10 +194,11 @@ button{
     				</div>
     				<div>
     					<h1>44,000원</h1>
-    					<button class = "item_buy">구매하기</button>
+    					<button class = "item_buy" onclick = "location.href = 'agent_pay2.agent'">구매하기</button>
     				</div>
     			</li>
     		</ul>
+    	</form>	
     	</div>
     </section>
     <section id = "prim_p" class = "sales_view">

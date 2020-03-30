@@ -11,6 +11,9 @@
 
 drop sequence noticeseq;
 drop table notice_tb;
+drop table item_tb;
+drop table pay_tb;
+
 
 create sequence noticeseq;
 create table notice_tb(
@@ -19,6 +22,19 @@ create table notice_tb(
 	content_nt varchar2(4000) not null,
 	date_nt date not null
 );
+
+create table item_tb(
+	name_it varchar2(1000) NOT NULL,
+	price_it varchar2(1000) NOT NULL
+);
+
+create table pay_tb(
+	name_it varchar2(1000) NOT NULL,
+	email varchar2(1000) NOT NULL, 
+	addr_pay varchar2(1000) NOT NULL,
+	total_pay varchar2(1000) NOT NULL
+);
+
 
 insert into notice_tb values(noticeseq.nextval,'방주인매물 노출 정책 변경사항 안내','안녕하세요. 모방입니다.',sysdate);
 insert into notice_tb values(noticeseq.nextval,'공지사항14','안녕하세요. 모방입니다.',sysdate);

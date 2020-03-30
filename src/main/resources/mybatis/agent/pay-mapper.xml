@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="notice">
+	
+	<resultMap type="AgentPayDto" id="payMap">
+		<result property="name_it" column="NAME_IT"/>
+		<result property="email" column="EMAIL"/>
+		<result property="addr_pay" column="ADDR_PAY"/>
+		<result property="total_pay" column="TOTAL_PAY"/>
+	</resultMap>
+	
+	<select id = "select_pay" resultMap="payMap">
+		SELECT NAME_IT, EMAIL, ADDR_PAY, TOTAL_PAY FROM PAY_TB WHERE NAME_IT = #{NAMT_IT}
+	</select>
+	
+
+
+</mapper>

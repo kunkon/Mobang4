@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.finalproject.mobang.admin.controller.AdminController;
 import com.finalproject.mobang.agent.biz.AgentNoticeBiz;
+import com.finalproject.mobang.agent.dto.AgentItemDto;
 import com.finalproject.mobang.agent.dto.AgentNoticeDto;
+import com.finalproject.mobang.agent.dto.AgentPayDto;
 import com.finalproject.mobang.agent.dto.Criteria;
 import com.finalproject.mobang.agent.dto.PageMaker;
 
@@ -67,8 +69,9 @@ public class AgentController {
 	}
 	
 	@RequestMapping(value ="/agent_sales.agent")
-	public String sales(Model model) {
-			
+	public String sales(Model model, AgentItemDto dto) {
+		
+		model.addAttribute("dto", dto);
 		return "/agent/agent_sales";
 	}
 	@RequestMapping(value="/agent_roominsert.agent")
@@ -93,10 +96,12 @@ public class AgentController {
 		return "/agent/agent_mypage";
 	}
 	@RequestMapping(value = "/agent_pay.agent")
-	public String agentPay(@RequestParam("roomType")String roomType,@RequestParam("price")int price,Model model) {
-		model.addAttribute("roomType", roomType);
-		model.addAttribute("price", price);
+	public String agentPay(Model model) {
 		return "/agent/agent_pay";
+	}
+	@RequestMapping(value = "/agent_pay2.agent")
+	public String agentPay2(Model model) {
+		return "/agent/agent_pay2";
 	}
 	
 	@RequestMapping(value = "/agent_sales_complete.agent")

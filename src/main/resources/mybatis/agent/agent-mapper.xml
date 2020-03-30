@@ -48,4 +48,5 @@
 		</foreach>
 		</where>
 	</delete>
+	
 </mapper>

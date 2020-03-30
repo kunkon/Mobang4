@@ -17,8 +17,8 @@
 	    pg : 'kakaopay', // version 1.1.0부터 지원.
 	    pay_method : 'card',
 	    merchant_uid : 'merchant_' + new Date().getTime(),
-	    name : '원룸/투룸/쓰리룸 상품',
-	    amount : 88000,
+	    name : '오피스텔 상품',
+	    amount : 44000,
 	    buyer_email : 'iamport@siot.do',
 	    buyer_name : '구매자이름',
 	    buyer_tel : '010-1234-5678',
